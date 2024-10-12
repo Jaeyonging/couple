@@ -16,18 +16,16 @@ const Map = () => {
             <div onClick={handleMapClick}>
                 <NaverMap longtitude={longtitude} latitude={latitude} />
             </div>
-            {isPopupOpen ? (
-                <div
-                    className={`h-[40vh] w-[100vw] absolute rounded-[50px] p-4 bottom-0 flex bg-[white] transition-transform duration-500 ease-in-out ${isPopupOpen ? 'translate-y-0' : 'translate-y-[40vh]'
-                        }`}
-                >
-                    레스토랑 1
-                </div>
-            ) : (
-                <div className="absolute bottom-[8vh] left-1/2 transform -translate-x-1/2 transition-transform duration-500 ease-in-out animate-bounce" onClick={handleMapClick}>
-                    <FaAngleDoubleUp size={50} />
-                </div>
-            )}
+            <div
+                className={`h-[40vh] w-[100vw] absolute rounded-[50px] p-4 bottom-0 flex bg-[white] transition-transform duration-500 ease-in-out ${isPopupOpen ? 'translate-y-0' : 'translate-y-[40vh]'
+                    }`}
+            >
+                레스토랑 1
+            </div>
+            {!isPopupOpen && <div className="absolute bottom-[8vh] left-1/2 transform -translate-x-1/2 transition-transform duration-500 ease-in-out animate-bounce" onClick={handleMapClick}>
+                <FaAngleDoubleUp size={50}
+                />
+            </div>}
         </>
     );
 };
