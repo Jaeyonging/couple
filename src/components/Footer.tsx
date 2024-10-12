@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaHome } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaMap } from "react-icons/fa";
 
 const Footer = () => {
     const navigate = useNavigate();
+    const location = useLocation()
     const [clickedIcon, setIconClicked] = useState("couple")
+
     const handleIconClicked = (url: string) => {
         setIconClicked(url)
         navigate("/" + url);
     };
+
+    useEffect(() => {
+        const currentPath = location.pathname.substring(1); // Get the path without leading "/"
+        setIconClicked(currentPath); // Set clickedIcon based on current URL
+    }, [location]);
 
     return (
         <div className='bg-[white] w-[100vw] h-[8vh] fixed items-center justify-between bottom-0 flex flex-row border-t-[1px] text-[30px]'>
