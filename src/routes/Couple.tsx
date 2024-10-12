@@ -6,8 +6,8 @@ import { calculateCoupleDate } from '../types/types';
 export const Couple = () => {
   const [date, setDate] = useState("21.03.30");
   const [todayDate, setTodayDate] = useState<number>();
-  const [image1, setImage1] = useState<string | ArrayBuffer | null>('../ironman.png');
-  const [image2, setImage2] = useState<string | ArrayBuffer | null>('https://i.namu.wiki/i/_ETAzc6dAPEFin4a5SXNg7om8Oc6D1ogmALu3CxdLA3ZKToN1XcHp4FPSRk62NhHKSfngtOj6KehZQvdvo8wQw.webp');
+  const [image1, setImage1] = useState<string | ArrayBuffer | null>('../profile1.jpeg');
+  const [image2, setImage2] = useState<string | ArrayBuffer | null>('../profile2.jpeg');
 
   useEffect(() => {
     if (date) {
