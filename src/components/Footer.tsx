@@ -25,7 +25,7 @@ const Footer = () => {
             <div className={`w-[25vw] h-full flex justify-center items-center border-r-[1px] ${clickedIcon == "map" ? "bg-[#0000000f]" : "bg-[white]"}`} onClick={() => handleIconClicked('map')}>
                 <FaMap />
             </div>
-            <div className={`w-[50vw] h-full flex justify-center items-center border-r-[1px] ${clickedIcon == "couple" ? "bg-[#0000000f]" : "bg-[white]"}`} onClick={() => handleIconClicked('couple')}>
+            <div className={`w-[50vw] h-full flex justify-center items-center border-r-[1px] ${(clickedIcon == "couple" || clickedIcon == "") ? "bg-[#0000000f]" : "bg-[white]"}`} onClick={() => handleIconClicked('couple')}>
                 <img src='../couple.png' className='w-[50%] h-[80%] object-contain' />
             </div>
             <div className={`w-[25vw] h-full flex justify-center items-center border-r-[1px] ${clickedIcon == "setting" ? "bg-[#0000000f]" : "bg-[white]"}`} onClick={() => handleIconClicked('setting')}>

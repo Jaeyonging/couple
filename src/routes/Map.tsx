@@ -13,14 +13,11 @@ const Map = () => {
 
     useEffect(() => {
         if (!isPopupOpen) {
-            // 팝업이 닫혔을 때 스크롤 방지
             document.body.style.overflow = 'hidden';
         } else {
-            // 팝업이 열렸을 때 스크롤 허용
             document.body.style.overflow = 'auto';
         }
 
-        // Cleanup 함수
         return () => {
             document.body.style.overflow = 'auto';
         };
