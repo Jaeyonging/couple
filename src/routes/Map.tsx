@@ -47,7 +47,7 @@ const Map = () => {
                 <NaverMap longtitude={longtitude} latitude={latitude} />
             </div>
             <div
-                className={`h-[40vh] w-[100vw] absolute rounded-[50px] p-4 bottom-0 flex bg-[white] transition-transform duration-500 ease-in-out ${isPopupOpen ? 'translate-y-0' : 'translate-y-[40vh]'
+                className={`h-[40vh] w-[100vw] absolute rounded-[50px] p-4 bottom-0 flex bg-[white] transition-transform duration-500 ease-in-out ${isPopupOpen ? 'translate-y-0' : 'translate-y-[40vh] h-0'
                     }`}
             >
                 등록된 레스토랑
