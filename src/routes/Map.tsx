@@ -28,16 +28,8 @@ const Map = () => {
     };
 
     useEffect(() => {
-        if (!isPopupOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
 
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
-    }, [isPopupOpen]);
+    }, []);
 
     return (
         <div className='w-[100vw] h-[100vh] overflow-hidden'>
