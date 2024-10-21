@@ -42,7 +42,7 @@ const Login = () => {
                 <LoginButton img='../naverLogo.png' title='네이버 아이디로 로그인' onClick={NaverLogin} />
             </div>
             <div className='flex w-[80vw] self-center justify-around mt-[10px]'>
-                <div className='text-[#f844da] underline' onClick={() => onClickHandler("register")}>다른 이메일로 로그인</div>
+                <div className='text-[#f844da] underline' onClick={() => onClickHandler("email")}>다른 이메일로 로그인</div>
             </div>
         </div >
     )
