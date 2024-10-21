@@ -6,7 +6,9 @@ const Login = () => {
     const KAKAO_APP_KEY = import.meta.env.VITE_KAKAO_RESTAPI;
     const NAVER_CLIENTID = import.meta.env.VITE_NAVER_CLIENT;
     const GOOGLE_CLIENTID = import.meta.env.VITE_GOOGLE_CLIENTID;
-    const REDIRECT_URL = "http://localhost:5173/login/auth";
+    const REDIRECT_URL = import.meta.env.PROD
+        ? "https://couple-rosy.vercel.app/login/auth"
+        : "http://localhost:5173/login/auth";
     const STATE = false
     const KAKAO = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_APP_KEY}&redirect_uri=${REDIRECT_URL}&response_type=code`;
     const GOOGLE = `https://accounts.google.com/o/oauth2/auth?client_id=${GOOGLE_CLIENTID}&redirect_uri=${REDIRECT_URL}&response_type=code&scope=openid email profile&access_type=offline`;
