@@ -5,20 +5,33 @@ import Footer from "./components/Footer";
 import Setting from "./routes/Setting";
 import Map from "./routes/Map";
 import { Couple } from "./routes/Couple";
+import Login from "./routes/login/Login";
+import Find from "./routes/login/Find";
+import Register from "./routes/login/Register";
+import Auth from "./routes/login/Auth";
 
 
 function App() {
-
+  const location = useLocation()
+  useEffect(() => {
+    console.log(location.pathname)
+  }, [])
   return (
     <>
       < Suspense fallback={< div > 로딩중</div >}>
         <Routes>
           <Route path="/" element={<Couple />} />
+          <Route path="/login/auth" element={<Auth />} />
+          <Route path="/home" element={<Couple />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/login/register" element={<Register />} />
           <Route path="/couple" element={<Couple />} />
           <Route path="/setting" element={<Setting />} />
         </Routes>
-        <Footer />
+        {!location.pathname.includes("login") && <Footer />
+
+        }
       </Suspense >
 
     </>

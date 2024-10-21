@@ -32,7 +32,7 @@ const Map = () => {
     }, []);
 
     return (
-        <div className='w-[100vw] h-[100vh] overflow-hidden'>
+        <div className='w-[100vw] h-[100vh]'>
             <div className='absolute top-0 w-[100vw] h-[8vh] flex justify-center items-center bg-[white] p-2'>
                 <input
                     className='border-[3px] w-[85vw] p-2 items-center justify-center flex border-[red]'
