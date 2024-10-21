@@ -2,8 +2,7 @@ import React from 'react'
 
 const Register = () => {
     return (
-        <div>
-
+        <div className='w-[100vw] flex'>
         </div>
     )
 }

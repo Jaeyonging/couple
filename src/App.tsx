@@ -22,7 +22,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Couple />} />
           <Route path="/login/auth" element={<Auth />} />
-          <Route path="/home" element={<Couple />} />
           <Route path="/map" element={<Map />} />
           <Route path="/login" element={<Login />} />
           <Route path="/login/register" element={<Register />} />
